@@ -17,9 +17,6 @@ async def ping(ctx):
     await ctx.send('pong')
     await change_presence(activity=game)
     game = discord.game(str('Hello,World!'))
-  
-    class discord.game(name(str('Hello,World!')
-
 
 
 bot.run(token)
