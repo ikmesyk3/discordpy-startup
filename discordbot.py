@@ -7,7 +7,7 @@ import traceback
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-class discord.game(str('Hello,World!'))
+class discord.game(name(str('Hello,World!')))
 
   
 @bot.event
