@@ -21,6 +21,7 @@ async def start(client):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-    
+    discord.__version__
+
 
 bot.run(token)
