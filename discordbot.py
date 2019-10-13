@@ -6,6 +6,11 @@ import traceback
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
+@bot.stats
+async def on_ready():
+  activity = discord.activity(name='my activity , type=discord.activityType.Playing)
+    await client.change_Presence(activity=activity)
+    await client.change_presence(activity=discord.game(name='Hello,World!')
 
 @bot.event
 async def on_command_error(ctx, error):
