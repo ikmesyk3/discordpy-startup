@@ -3,12 +3,14 @@
 from discord.ext import commands
 import os
 import traceback
+import discord
 
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 client = discord.client()
+
   
 @bot.event
 async def on_command_error(ctx, error):
@@ -27,7 +29,6 @@ async def (client):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-    
     
   
 bot.run(token)
