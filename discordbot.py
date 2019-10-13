@@ -31,10 +31,9 @@ async def on_member_join(member):
   CHANNEL_ID = 631867807264538624
   
 @bot.command()
-async def on_server_join(member):
-    server = member.server
-    default channel = server.default_channel
-    message = ''Hello {}, welcome to {}'.format(member.mention, server.name)'
-    await client.send_message(default_channel, message)
+async def on_member_join(member):
+    for channel in member.server.channels:
+        if channel.name == 'hello-world':
+            await client.send_message(channel, 'Message to send when member joins')
 
 bot.run(token)
