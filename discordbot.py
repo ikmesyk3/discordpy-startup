@@ -7,6 +7,8 @@ import traceback
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
+client = discord.client()
+
   
 @bot.event
 async def on_command_error(ctx, error):
