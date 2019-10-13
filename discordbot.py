@@ -20,6 +20,4 @@ async def ping(ctx):
 async def start(ctx):
   await client.change_presence(activity=game)
     
-    discord.game(str('Hello,World!'))
-    
 bot.run(token)
