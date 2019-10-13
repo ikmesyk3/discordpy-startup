@@ -7,7 +7,7 @@ import traceback
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-class discord.ActivityType(playing)
+class discord.game(str('Hello,World!'))
 
   
 @bot.event
@@ -17,8 +17,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def start(client):
   await client.change_presence (activity=game)
-  game = discord.game(str('Hello,World!'))
-
+  
 
 @bot.command()
 async def ping(ctx):
