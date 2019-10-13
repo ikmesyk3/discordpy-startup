@@ -16,4 +16,10 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
+@bot.start()
+async def start(ctx):
+  await client.change_presence(activity=game)
+    
+    discord.game(str('Hello,World!'))
+    
 bot.run(token)
