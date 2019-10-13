@@ -29,5 +29,12 @@ async def ping(ctx):
 async def on_member_join(member):
   await member.send('いらっしゃいませ')
   CHANNEL_ID = 631867807264538624
+  
+@client.event
+async def on_server_join(member):
+    server = member.server
+    default channel = server.default_channel
+    message = ''Hello {}, welcome to {}'.format(member.mention, server.name)'
+    await client.send_message(default_channel, message)
 
 bot.run(token)
