@@ -9,8 +9,6 @@ import discord
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-class MyClient(discord.Client):
-
   
 @bot.event
 async def on_command_error(ctx, error):
@@ -29,6 +27,13 @@ async def ping(ctx):
 async def on_member_join(member):
   await member.send('いらっしゃいませ')
   CHANNEL_ID = 631867807264538624
+
+@bot.command()  
+async def on_member_join(member):
+    for channel in member.server.channels:
+        if channel.name == 'general':
+            await client.send_message(channel, 'Message to send when member joins')
+
   
 
 bot.run(token)
