@@ -11,12 +11,11 @@ token = os.environ['DISCORD_BOT_TOKEN']
 async def on_command_error(ctx, error):
     await ctx.send(str(error))
     
-@bot.event
-async def on_member_join(member):
-    for channel in member.server.channels:
-        if channel.name == 'hello-world':
-            await client.send_message(channel, 'Message to send when member joins')
-
+@bot.event()
+async def on_join_member(member):
+  await member.send('hello,world')
+    
+    
 @bot.command()
 async def (client):
   await client.change_presence (activity=game)
@@ -25,6 +24,7 @@ async def (client):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+    
     
   
 bot.run(token)
