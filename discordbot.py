@@ -14,7 +14,7 @@ async def on_command_error(ctx, error):
     
 @bot.command()
 async def start(ctx):
-  await change_presence (activity=game)
+  await client.change_presence (activity=game)
   game = discord.game(str('Hello,World!'))
 
 
