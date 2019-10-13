@@ -8,11 +8,6 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 
 @bot.event
-async def on_ready():
-  client.change_presence(activity=discord.game(name='Hello,World!')
-  
-
-@bot.event
 async def on_command_error(ctx, error):
     await ctx.send(str(error))
 
