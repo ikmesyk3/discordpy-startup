@@ -22,8 +22,8 @@ async def start(client):
 async def ping(ctx):
     await ctx.send('pong')
 
-    @bot.command()
-async def on_member_join(member):
+@bot.command()
+async def join(member):
   await menber.send('いらっしゃいませ')
 
 bot.run(token)
