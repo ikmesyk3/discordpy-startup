@@ -30,7 +30,7 @@ async def on_member_join(member):
   await member.send('いらっしゃいませ')
   CHANNEL_ID = 631867807264538624
   
-@client.event
+@bot.command()
 async def on_server_join(member):
     server = member.server
     default channel = server.default_channel
