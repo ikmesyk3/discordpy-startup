@@ -32,6 +32,4 @@ async def on_member_join(member):
         if channel.name == 'hello-world':
             await client.send_message(channel, 'Message to send when member joins')
 
-  
-
 bot.run(token)
