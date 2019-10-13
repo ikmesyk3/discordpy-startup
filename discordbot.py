@@ -7,6 +7,11 @@ bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
+@client.event
+async def on_ready():
+  client.change_presence(activity=discord.game(name='Hello,World!')
+  
+
 @bot.event
 async def on_command_error(ctx, error):
     await ctx.send(str(error))
