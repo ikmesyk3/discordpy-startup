@@ -12,8 +12,8 @@ token = os.environ['DISCORD_BOT_TOKEN']
 async def on_command_error(ctx, error):
     await ctx.send(str(error))
     
-@bot.event
-async def on_ready():
+@bot.command()
+async def start(ctx):
   await change_presence(activity=game)
   game = discord.game(str('Hello,World!'))
 
