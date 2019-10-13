@@ -12,7 +12,7 @@ async def on_command_error(ctx, error):
     await ctx.send(str(error))
     
 @bot.command()
-async def start(client):
+async def (client):
   await client.change_presence (activity=game)
   game=discord.game(name(str('Hello,World!')))
 
@@ -20,7 +20,7 @@ async def start(client):
 async def ping(ctx):
     await ctx.send('pong')
     
-@bot.command()
+@bot.event()
 async def on_member_join(member):
   await member.send('いらっしゃいませ')
   
