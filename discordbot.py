@@ -1,7 +1,7 @@
 # coding: utf-8
   
 #from discord.ext 
-#import commands
+import commands
 import os
 import traceback
 import discord
