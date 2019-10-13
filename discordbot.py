@@ -7,12 +7,14 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+
+client = discord.client()
   
 @bot.event
 async def on_command_error(ctx, error):
     await ctx.send(str(error))
     
-@bot.event
+@client.event
 async def on_join_member(member):
   await member.send('hello,world')
     
