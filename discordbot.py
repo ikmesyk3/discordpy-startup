@@ -11,7 +11,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 async def on_command_error(ctx, error):
     await ctx.send(str(error))
     
-@bot.event()
+@bot.event
 async def on_join_member(member):
   await member.send('hello,world')
     
