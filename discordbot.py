@@ -3,7 +3,7 @@
 from discord.ext import commands
 import os
 import traceback
-client = discord.client()
+client = discord.Client()
 
 
 bot = commands.Bot(command_prefix='/')
